@@ -7,10 +7,12 @@ public class MovementScript : MonoBehaviour
     public float speed = 0.08f;
     public float jumpForce = 7f;
     public bool isInAir = false;
+    float scaleX = 0.2f;
+    float scaleY = 0.2f;
     float xAxisInput;
     Rigidbody2D rbody;
-    SpriteRenderer spriteRenderer;
     Vector3 velocityV3;
+    Vector3 scale;
     public bool facingRight = true;
     public bool facingLeft = false;
 
@@ -23,7 +25,6 @@ public class MovementScript : MonoBehaviour
 
     void Awake(){
         rbody = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class MovementScript : MonoBehaviour
     {
         xAxisInput = Input.GetAxisRaw("Horizontal") * speed;
         velocityV3 = rbody.velocity;
+        scale = transform.localScale;
     }
 
     void FixedUpdate(){
@@ -52,9 +54,6 @@ public class MovementScript : MonoBehaviour
         if(Input.GetButton("Jump") && !isInAir){
             jump();
         }
-        // if(Input.GetButtonDown("Fire1")){
-        //     GameObject bullet = new GameObject();
-        // }
     }
 
     void moveLeft(){
@@ -81,10 +80,14 @@ public class MovementScript : MonoBehaviour
     //flipx = true means facing left
     void flipDirection(bool direction){
         // Debug.Log("flipped");
-        if(direction)
-            spriteRenderer.flipX = true;
-        else
-            spriteRenderer.flipX = false;
+        if(direction){
+            scale.Set(-scaleX, scaleY, 1);
+        }
+        else{
+            scale.Set(scaleX, scaleY, 1);
+        }
+
+        transform.localScale = scale;
     }
 
     void OnCollisionEnter2D(Collision2D collision){
