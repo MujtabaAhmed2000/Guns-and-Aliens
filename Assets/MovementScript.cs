@@ -83,4 +83,10 @@ public class MovementScript : MonoBehaviour
         else
             spriteRenderer.flipX = false;
     }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "Small Grunt"){
+            Destroy(gameObject);
+        }
+    }
 }
