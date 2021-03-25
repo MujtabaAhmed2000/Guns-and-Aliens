@@ -9,6 +9,7 @@ public class MovementScript : MonoBehaviour
     public bool isInAir = false;
     float xAxisInput;
     Rigidbody2D rbody;
+    SpriteRenderer spriteRenderer;
     Vector3 velocityV3;
     public bool facingRight = true;
     public bool facingLeft = false;
@@ -18,13 +19,17 @@ public class MovementScript : MonoBehaviour
     void Start()
     {
         // transform.position += new Vector3(0, -0.8f, 0);
-        transform.localScale.Set(2, 2, 2);
+        // transform.localScale.Set(2, 2, 2);
+    }
+
+    void Awake(){
+        rbody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rbody = GetComponent<Rigidbody2D>();
         xAxisInput = Input.GetAxisRaw("Horizontal") * speed;
         velocityV3 = rbody.velocity;
     }
@@ -55,36 +60,28 @@ public class MovementScript : MonoBehaviour
         transform.position += new Vector3(-speed, 0, 0);
         facingLeft = true;
         facingRight = false;
-        if(facingRight){
-            flipDirection(true);
-        }
+        flipDirection(true);
     }
     void moveRight(){
         // Debug.Log("Moved Right");
         transform.position += new Vector3(speed, 0, 0);
         facingLeft = false;
         facingRight = true;
-        if(facingLeft){
-            flipDirection(false);
-        }
+        flipDirection(false);
     }
     void jump(){
         // Debug.Log("Jumped");
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 
     //true means face left, false means face right
+    //flipx = false means facing right
+    //flipx = true means facing left
     void flipDirection(bool direction){
-        localScale = transform.localScale;
-        // Debug.Log(transform.localScale);
-        if(direction){
-            localScale.Set(0.2f, 0.2f, 1);
-            transform.localScale = localScale;  
-        }
-        else{
-            localScale.Set(-0.2f, 0.2f, 1);
-            transform.localScale = localScale;
-        }
-        
+        // Debug.Log("flipped");
+        if(direction)
+            spriteRenderer.flipX = true;
+        else
+            spriteRenderer.flipX = false;
     }
 }
