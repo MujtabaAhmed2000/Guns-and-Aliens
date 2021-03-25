@@ -52,6 +52,9 @@ public class MovementScript : MonoBehaviour
         if(Input.GetButton("Jump") && !isInAir){
             jump();
         }
+        // if(Input.GetButtonDown("Fire1")){
+        //     GameObject bullet = new GameObject();
+        // }
     }
 
     void moveLeft(){
