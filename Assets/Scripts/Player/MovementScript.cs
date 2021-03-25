@@ -7,14 +7,11 @@ public class MovementScript : MonoBehaviour
     public float speed = 0.08f;
     public float jumpForce = 7f;
     public bool isInAir = false;
-    float scaleX = 0.2f;
-    float scaleY = 0.2f;
     float xAxisInput;
     Rigidbody2D rbody;
     Vector3 velocityV3;
     Vector3 scale;
     public bool facingRight = true;
-    public bool facingLeft = false;
 
     // Start is called before the first frame update
     void Start()
@@ -59,40 +56,23 @@ public class MovementScript : MonoBehaviour
     void moveLeft(){
         // Debug.Log("Moved Left");
         transform.position += new Vector3(-speed, 0, 0);
-        facingLeft = true;
-        facingRight = false;
-        flipDirection(true);
+        if(facingRight)
+            flipDirection();
     }
     void moveRight(){
         // Debug.Log("Moved Right");
         transform.position += new Vector3(speed, 0, 0);
-        facingLeft = false;
-        facingRight = true;
-        flipDirection(false);
+        if(!facingRight)
+            flipDirection();
     }
     void jump(){
         // Debug.Log("Jumped");
         rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 
-    //true means face left, false means face right
-    //flipx = false means facing right
-    //flipx = true means facing left
-    void flipDirection(bool direction){
+    void flipDirection(){
         // Debug.Log("flipped");
-        if(direction){
-            scale.Set(-scaleX, scaleY, 1);
-        }
-        else{
-            scale.Set(scaleX, scaleY, 1);
-        }
-
-        transform.localScale = scale;
-    }
-
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag == "Small Grunt"){
-            Destroy(gameObject);
-        }
+        facingRight = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
