@@ -12,4 +12,10 @@ public class Bullet : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         rbody.velocity = transform.right * speed;
     }
+
+    void OnTriggerEnter2D(Collider2D collider){
+        if(collider.gameObject.tag == "Walls"){
+            Destroy(gameObject);
+        }
+    }
 }

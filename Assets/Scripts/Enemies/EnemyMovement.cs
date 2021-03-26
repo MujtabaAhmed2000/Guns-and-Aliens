@@ -1,13 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScript : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public float speed = 0.08f;
-    public float jumpForce = 7f;
-    public bool isInAir = false;
-    float xAxisInput;
+    // public float jumpForce = 7f;
+    // public bool isInAir = false;
     Rigidbody2D rbody;
     Vector3 velocityV3;
     Vector3 scale;
@@ -16,41 +15,24 @@ public class MovementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // transform.position += new Vector3(0, -0.8f, 0);
-        // transform.localScale.Set(2, 2, 2);
-    }
-
-    void Awake(){
         rbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        xAxisInput = Input.GetAxisRaw("Horizontal") * speed;
-        velocityV3 = rbody.velocity;
         scale = transform.localScale;
     }
 
     void FixedUpdate(){
-        if(velocityV3.y != 0){
-            isInAir = true;
-        }
-        else{
-            isInAir = false;
-        }
+        move();
+    }
 
-        if(xAxisInput > 0){
-            xAxisInput *= Time.fixedDeltaTime;
+    void move(){
+        if(facingRight)
             moveRight();
-        }
-        if(xAxisInput < 0){
-            xAxisInput *= Time.fixedDeltaTime;
+        else
             moveLeft();
-        }
-        if(Input.GetButton("Jump") && !isInAir){
-            jump();
-        }
     }
 
     void moveLeft(){
@@ -65,14 +47,25 @@ public class MovementScript : MonoBehaviour
         if(!facingRight)
             flipDirection();
     }
-    void jump(){
-        // Debug.Log("Jumped");
-        rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-    }
+    // void jump(){
+    //     // Debug.Log("Jumped");
+    //     rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+    // }
 
     void flipDirection(){
         // Debug.Log("flipped");
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "Walls"){
+            if(facingRight){
+                flipDirection();
+            }
+            else{
+                flipDirection();
+            }
+        }
     }
 }
