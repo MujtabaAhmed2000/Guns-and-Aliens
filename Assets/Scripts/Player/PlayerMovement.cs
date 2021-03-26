@@ -18,16 +18,14 @@ public class PlayerMovement : MonoBehaviour
     {
         // transform.position += new Vector3(0, -0.8f, 0);
         // transform.localScale.Set(2, 2, 2);
-    }
-
-    void Awake(){
         rbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        xAxisInput = Input.GetAxisRaw("Horizontal") * speed;
+        xAxisInput = Input.GetAxisRaw("Horizontal");
+        
         velocityV3 = rbody.velocity;
         scale = transform.localScale;
     }
@@ -39,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
         else{
             isInAir = false;
         }
-
         if(xAxisInput > 0){
             xAxisInput *= Time.fixedDeltaTime;
             moveRight();
