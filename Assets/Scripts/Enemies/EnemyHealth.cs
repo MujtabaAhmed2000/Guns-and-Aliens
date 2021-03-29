@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallGrunt : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public int hp = 2;
     

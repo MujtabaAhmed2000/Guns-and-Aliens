@@ -19,12 +19,15 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(collider.gameObject.tag == "Small Grunt"){
-            SmallGrunt smallGrunt = collider.GetComponent<SmallGrunt>();
+        // Debug.Log(collider.gameObject.name);
+
+        if(collider.gameObject.tag == "Enemy"){
+            EnemyHealth enemy = collider.GetComponent<EnemyHealth>();
+            
             // if(smallGrunt != null){
             //     smallGrunt.takeDamage(2);
             // }
-            smallGrunt.takeDamage(damage);
+            enemy.takeDamage(damage);
             Destroy(gameObject);
         }
     }
