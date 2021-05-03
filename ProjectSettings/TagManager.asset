@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - GhostWalls
   - GhostFloor
+  - Despawner
   layers:
   - Default
   - TransparentFX

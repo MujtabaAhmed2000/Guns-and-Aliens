@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 977584659795765531}
   - component: {fileID: 977584659795765530}
   - component: {fileID: 977584659795765521}
+  - component: {fileID: 8943183487723890565}
   m_Layer: 6
   m_Name: Small Grunt
   m_TagString: Enemy
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1112703373
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7147553b1e72eec449c5ace4f9f4d13a, type: 3}
   m_Color: {r: 0.745283, g: 0.18632075, b: 0.41167122, a: 1}
@@ -194,3 +195,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
+--- !u!114 &8943183487723890565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977584659795765529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c196e299899aa034db25dd5e8dd4ba37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

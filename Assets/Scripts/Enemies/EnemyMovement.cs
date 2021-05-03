@@ -61,7 +61,7 @@ public class EnemyMovement : MonoBehaviour
     //     rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     // }
 
-    void flipDirection(){
+    public void flipDirection(){
         // Debug.Log("flipped");
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);

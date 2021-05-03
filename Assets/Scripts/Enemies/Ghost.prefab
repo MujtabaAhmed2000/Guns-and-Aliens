@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2975649753283886658}
   - component: {fileID: 2975649753283886665}
   - component: {fileID: 2975649753283886659}
+  - component: {fileID: 1531702276365213821}
   m_Layer: 8
   m_Name: Ghost
   m_TagString: Enemy
@@ -152,3 +153,15 @@ MonoBehaviour:
   ySpeed: 0.04
   facingRight: 0
   facingUp: 1
+--- !u!114 &1531702276365213821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2975649753283886657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c196e299899aa034db25dd5e8dd4ba37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
