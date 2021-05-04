@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 977584659795765530}
   - component: {fileID: 977584659795765521}
   - component: {fileID: 8943183487723890565}
+  - component: {fileID: 2443233722605020998}
   m_Layer: 6
   m_Name: Small Grunt
   m_TagString: Enemy
@@ -49,6 +50,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -207,3 +209,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c196e299899aa034db25dd5e8dd4ba37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  topLeftSpawner: {fileID: 0}
+  topRightTransform: {fileID: 0}
+--- !u!114 &2443233722605020998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977584659795765529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cca194ca6c383c4b857c22fc7914174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCarry: 0

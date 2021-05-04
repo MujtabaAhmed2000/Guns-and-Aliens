@@ -5,7 +5,12 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int hp = 2;
-    
+    public GameObject player;
+
+    void Start(){
+        player = GameObject.Find("Main Player");
+    }
+
     public void takeDamage(int damage){
         hp -= damage;
 
@@ -16,5 +21,7 @@ public class EnemyHealth : MonoBehaviour
 
     void die(){
         Destroy(gameObject);
+        PlayerInfo info = player.GetComponent<PlayerInfo>();
+        info.score += 1;
     }
 }
