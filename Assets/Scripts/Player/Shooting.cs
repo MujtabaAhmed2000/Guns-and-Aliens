@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public float delay = 0.5f;
+    public float delay = .5f;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    AudioSource shootingSound;
 
+    void Start()
+    {
+        shootingSound = GetComponent<AudioSource>();
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +34,6 @@ public class Shooting : MonoBehaviour
     }
 
     void resetDelay(){
-        delay = 0.5f;
+        delay = .5f;
     }
 }

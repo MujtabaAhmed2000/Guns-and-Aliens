@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // xAxisInput = Input.GetAxisRaw("Horizontal");
-        xAxisInput = joystick.Horizontal;
+        xAxisInput = Input.GetAxisRaw("Horizontal");
+        // xAxisInput = joystick.Horizontal;
         
         velocityV3 = rbody.velocity;
         scale = transform.localScale;
