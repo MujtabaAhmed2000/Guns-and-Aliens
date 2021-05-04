@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2975649753283886665}
   - component: {fileID: 2975649753283886659}
   - component: {fileID: 1531702276365213821}
+  - component: {fileID: -8307394928791258921}
   m_Layer: 8
   m_Name: Ghost
   m_TagString: Enemy
@@ -138,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  player: {fileID: 0}
 --- !u!114 &2975649753283886659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +170,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topLeftSpawner: {fileID: 0}
   topRightTransform: {fileID: 0}
+--- !u!114 &-8307394928791258921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2975649753283886657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cca194ca6c383c4b857c22fc7914174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCarry: 0

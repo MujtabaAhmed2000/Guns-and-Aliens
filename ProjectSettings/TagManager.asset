@@ -11,6 +11,7 @@ TagManager:
   - GhostWalls
   - GhostFloor
   - Despawner
+  - Chest
   layers:
   - Default
   - TransparentFX

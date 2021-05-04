@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int hp = 2;
-    
+    // GameObject player = get component of player 
+
     public void takeDamage(int damage){
         hp -= damage;
 
@@ -16,5 +17,6 @@ public class EnemyHealth : MonoBehaviour
 
     void die(){
         Destroy(gameObject);
+        // increase score
     }
 }
