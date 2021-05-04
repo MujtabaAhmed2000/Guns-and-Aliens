@@ -39,11 +39,11 @@ public class PlayerMovement : MonoBehaviour
         else{
             isInAir = false;
         }
-        if(xAxisInput > 0){
+        if(xAxisInput >= 0.2f){
             xAxisInput *= Time.fixedDeltaTime;
             moveRight();
         }
-        if(xAxisInput < 0){
+        if(xAxisInput <= -0.2f){
             xAxisInput *= Time.fixedDeltaTime;
             moveLeft();
         }
