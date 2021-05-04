@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public float delay = 0.5f;
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -11,11 +12,22 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("Fire1")){
-            shoot();
+            if(delay < 0){
+                shoot();
+                resetDelay();
+            }
         }
+    }
+
+    void FixedUpdate(){
+        delay -= Time.fixedDeltaTime;
     }
 
     void shoot(){
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void resetDelay(){
+        delay = 0.5f;
     }
 }

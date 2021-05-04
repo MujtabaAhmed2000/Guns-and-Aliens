@@ -4160,6 +4160,7 @@ MonoBehaviour:
   jumpForce: 7
   isInAir: 0
   facingRight: 1
+  joystick: {fileID: 0}
 --- !u!58 &1627426950
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4216,6 +4217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdfcb51eb552e434baa842cda066f9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.5
   firePoint: {fileID: 1280007530}
   bulletPrefab: {fileID: 7254906080960904926, guid: 554e44573e559f2438302bc82cdf9dd2,
     type: 3}
