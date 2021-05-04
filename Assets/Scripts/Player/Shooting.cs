@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1")){
+        if(Input.GetButton("Fire1")){
             if(delay < 0){
                 shoot();
                 resetDelay();
