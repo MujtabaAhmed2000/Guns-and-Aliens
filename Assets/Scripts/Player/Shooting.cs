@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public float delay = .5f;
+    public float delay = .2f;
     public Transform firePoint;
     public GameObject bulletPrefab;
     AudioSource shootingSound;
@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
         if(Input.GetButton("Fire1")){
             if(delay < 0){
                 shoot();
+                shootingSound.Play();
                 resetDelay();
             }
         }
@@ -34,6 +35,6 @@ public class Shooting : MonoBehaviour
     }
 
     void resetDelay(){
-        delay = .5f;
+        delay = .2f;
     }
 }
