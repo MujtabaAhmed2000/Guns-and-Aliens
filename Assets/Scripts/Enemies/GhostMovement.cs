@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
-    public float xSpeed = 0.04f;
-    public float ySpeed = 0.04f;
-    // public float jumpForce = 7f;
-    // public bool isInAir = false;
-    Rigidbody2D rbody;
-    Vector3 scale;
+    public float xSpeed;
+    public float ySpeed;
     public bool facingRight;
     public bool facingUp = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        rbody = GetComponent<Rigidbody2D>();
+        // assign random x and y speed to make ghost paths randomized
+        assignNewSpeed();
+
         //To make the sprite face left when spawns from tpo right corner
         if(transform.rotation.y == 0){
             facingRight = true;
@@ -24,15 +22,11 @@ public class GhostMovement : MonoBehaviour
         else{
             facingRight = false;
         }
+
+        // Ignore the floors and other enemy grunts
         Physics2D.IgnoreLayerCollision(6, 6);
         Physics2D.IgnoreLayerCollision(8, 7);
         Physics2D.IgnoreLayerCollision(6, 8);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        scale = transform.localScale;
     }
 
     void FixedUpdate(){
@@ -52,18 +46,10 @@ public class GhostMovement : MonoBehaviour
     }
 
     void moveLeft(){
-        // Debug.Log("Moved Left");
         transform.position += new Vector3(-xSpeed, 0, 0);
-        // if(facingRight)
-        //     flipDirection();
-        // facingRight = false;
     }
     void moveRight(){
-        // Debug.Log("Moved Right");
         transform.position += new Vector3(xSpeed, 0, 0);
-        // if(!facingRight)
-        //     flipDirection();
-        // facingRight = true;
     }
     void moveUp(){
         transform.position += new Vector3(0, ySpeed, 0);
@@ -71,13 +57,8 @@ public class GhostMovement : MonoBehaviour
     void moveDown(){
         transform.position += new Vector3(0, -ySpeed, 0);
     }
-    // void jump(){
-    //     // Debug.Log("Jumped");
-    //     rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-    // }
 
     void flipXDirection(){
-        // Debug.Log("flipped");
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
     }
@@ -87,11 +68,17 @@ public class GhostMovement : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
+        assignNewSpeed();
         if(collision.gameObject.tag == "GhostWalls"){
             flipXDirection();
         }
         if(collision.gameObject.tag == "GhostFloor"){
             flipYDirection();
         }
+    }
+
+    void assignNewSpeed(){
+        xSpeed = Random.Range(0.02f, 0.06f);
+        ySpeed = Random.Range(0.02f, 0.06f);
     }
 }
