@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocityV3;
     Vector3 scale;
     public bool facingRight = true;
+    public Joystick joystick;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xAxisInput = Input.GetAxisRaw("Horizontal");
+        // xAxisInput = Input.GetAxisRaw("Horizontal");
+        xAxisInput = joystick.Horizontal;
         
         velocityV3 = rbody.velocity;
         scale = transform.localScale;
