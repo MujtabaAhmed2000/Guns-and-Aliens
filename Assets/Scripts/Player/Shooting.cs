@@ -30,7 +30,7 @@ public class Shooting : MonoBehaviour
         delay -= Time.fixedDeltaTime;
     }
 
-    void shoot(){
+    public void shoot(){
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
