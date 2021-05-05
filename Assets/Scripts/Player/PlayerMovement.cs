@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         if(!facingRight)
             flipDirection();
     }
-    void jump(){
+    public void jump(){
         // Debug.Log("Jumped");
         rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
