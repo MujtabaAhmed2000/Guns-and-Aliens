@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject pauseButtonPanel;
     public GameObject optionsMenu;
+    public GameObject GameSound;
+    public GameObject MuteButton;
 
     // public GameObject PauseButtonPanel { get => pauseButtonPanel; set => pauseButtonPanel = value; }
 
@@ -55,7 +57,20 @@ public class PauseMenu : MonoBehaviour
 
     public void muteAudio()
     {
+        GameSound.SetActive(false);
+        MuteButton.SetActive(false);
+    }
 
+    public void unmute()
+    {
+        GameSound.SetActive(true);
+        MuteButton.SetActive(true);
+    }
+
+    public void back()
+    {
+        pauseMenu.SetActive(true);
+        optionsMenu.SetActive(false);
     }
 
     public void exit()
