@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8689241151849806476}
   - component: {fileID: 8689241151849806479}
   - component: {fileID: 8689241151849806705}
-  - component: {fileID: 3906985080078786559}
   - component: {fileID: -3571424001230055170}
   m_Layer: 0
   m_Name: Gold
@@ -96,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.075317085, y: 0}
@@ -112,27 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.004061, y: 1.560637}
   m_EdgeRadius: 0
---- !u!50 &3906985080078786559
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8689241151849806704}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 5
 --- !u!114 &-3571424001230055170
 MonoBehaviour:
   m_ObjectHideFlags: 0
