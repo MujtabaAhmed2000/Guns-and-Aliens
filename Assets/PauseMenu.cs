@@ -50,10 +50,6 @@ public class PauseMenu : MonoBehaviour
         optionsMenu.SetActive(true);
     }
 
-    public void flipControls()
-    {
-
-    }
 
     public void muteAudio()
     {
