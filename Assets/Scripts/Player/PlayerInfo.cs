@@ -6,6 +6,7 @@ public class PlayerInfo : MonoBehaviour
 {
     public int score;
     public int goldCarry;
+    public int goldCarryLimit = 10;
     public bool carryingGold = false;
     public SpriteRenderer spriteRenderer;
 
@@ -14,6 +15,15 @@ public class PlayerInfo : MonoBehaviour
     {
         score = 0;
         goldCarry = 0;
+    }
+
+    public bool addGold(int amount){
+        if(goldCarry + amount > goldCarryLimit)
+            return false;
+        else{
+            goldCarry += amount;
+            return true;
+        }
     }
 
     public void setCarryGoldTrue(){
