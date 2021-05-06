@@ -26,6 +26,7 @@ public class Chest : MonoBehaviour
             PlayerInfo info = collision.gameObject.GetComponent<PlayerInfo>();
             depositGold(info.goldCarry);
             info.goldCarry = 0;
+            info.setCarryGoldFalse();
         }
         if(collision.gameObject.tag == "Enemy"){
             int amount = stealGold();
