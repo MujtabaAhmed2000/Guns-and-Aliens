@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerInfo : MonoBehaviour
     public int goldCarryLimit = 10;
     public bool carryingGold = false;
     public SpriteRenderer spriteRenderer;
+
+    public Text scoreText;
+    public Text lastScore;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +38,16 @@ public class PlayerInfo : MonoBehaviour
     public void setCarryGoldFalse(){
         carryingGold = false;
         spriteRenderer.enabled = false;
+    }
+
+    void Update()
+    {
+        scoreUpdate();
+    }
+
+    void scoreUpdate()
+    {
+        scoreText.text = score.ToString();
+        lastScore = scoreText;
     }
 }
