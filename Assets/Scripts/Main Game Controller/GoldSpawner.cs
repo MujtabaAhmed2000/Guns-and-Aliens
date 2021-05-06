@@ -25,15 +25,16 @@ public class GoldSpawner : MonoBehaviour
     public Transform GoldSpawner17;
     public Transform GoldSpawner18;
 
-    public float spawntimer = 2f;
+    public float spawntimer = 4f;
 
     void FixedUpdate()
     {
         spawntimer -= Time.fixedDeltaTime;
 
-        if (spawntimer <= 0.0f)
+        if (spawntimer <= 0.0f){
             spawnGold();
-            //resetSpawnTimer();
+            resetSpawnTimer();
+        }
         
     }
 
@@ -105,6 +106,6 @@ public class GoldSpawner : MonoBehaviour
     
     void resetSpawnTimer()
     {
-        spawntimer = 2f;
+        spawntimer = 4f;
     }
 }
