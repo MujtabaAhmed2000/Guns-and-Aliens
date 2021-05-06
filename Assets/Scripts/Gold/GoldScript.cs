@@ -14,5 +14,13 @@ public class GoldScript : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        if(collider.gameObject.tag == "Enemy"){
+            EnemyInfo info = collider.GetComponent<EnemyInfo>();
+            if(info.addGold(value)){
+                info.setCarryGoldTrue();
+                Destroy(gameObject);
+            }
+        }
     }
 }
