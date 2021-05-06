@@ -30,4 +30,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Exit not working");
         Application.Quit();
     }
+
+    public void toGame()
+    {
+        SceneManager.LoadScene("MainGameScene");
+    }
 }
