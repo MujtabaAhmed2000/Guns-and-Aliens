@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 10367015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 680811363}
   - {fileID: 1895085752}
@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 421023230}
   - component: {fileID: 421023229}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2063,7 +2063,7 @@ RectTransform:
   m_GameObject: {fileID: 1598917620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1597399, y: 1.1597399, z: 1.1597399}
+  m_LocalScale: {x: 2, y: 2, z: 1.1597399}
   m_Children:
   - {fileID: 632887007}
   - {fileID: 26995620}
@@ -2074,7 +2074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.1596375, y: 0}
+  m_AnchoredPosition: {x: -1.159668, y: 0}
   m_SizeDelta: {x: 0.00012207031, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1607153003
