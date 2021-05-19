@@ -23,17 +23,17 @@ public class EnemyMovement : MonoBehaviour
         move();
     }
 
-    void move(){
+    public void move(){
         if(facingRight)
             moveRight();
         else
             moveLeft();
     }
 
-    void moveLeft(){
+    public void moveLeft(){
         transform.position += new Vector3(-speed, 0, 0);
     }
-    void moveRight(){
+    public void moveRight(){
         transform.position += new Vector3(speed, 0, 0);
     }
 
