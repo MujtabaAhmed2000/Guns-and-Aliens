@@ -12,6 +12,7 @@ TagManager:
   - GhostFloor
   - Despawner
   - Chest
+  - Gold
   layers:
   - Default
   - TransparentFX

@@ -58,7 +58,7 @@ public class GhostMovement : MonoBehaviour
         transform.position += new Vector3(0, -ySpeed, 0);
     }
 
-    void flipXDirection(){
+    public void flipXDirection(){
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
     }
