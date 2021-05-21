@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class ChaserMovement : MonoBehaviour
 {
     public float speed = 0.08f;
     bool facingRight;
@@ -17,10 +17,6 @@ public class EnemyMovement : MonoBehaviour
             facingRight = false;
         }
         Physics2D.IgnoreLayerCollision(6, 6);
-    }
-
-    void FixedUpdate(){
-        move();
     }
 
     void move(){

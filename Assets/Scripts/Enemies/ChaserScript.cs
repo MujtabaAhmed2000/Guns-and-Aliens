@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ChaserScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    ChaserMovement movement;
+
     void Start()
     {
-        
+        movement = gameObject.GetComponent<ChaserMovement>();
     }
 
     // Update is called once per frame
