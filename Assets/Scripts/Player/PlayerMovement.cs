@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 scale;
     public bool facingRight = true;
     public Joystick joystick;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         // xAxisInput = Input.GetAxisRaw("Horizontal");
         xAxisInput = joystick.Horizontal;
         
+        animator.SetFloat("Speed", Mathf.Abs(xAxisInput));
         velocityV3 = rbody.velocity;
         scale = transform.localScale;
     }
