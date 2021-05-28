@@ -33,4 +33,8 @@ public class EnemyInfo : MonoBehaviour
         carryingGold = false;
         spriteRenderer.enabled = false;
     }
+
+    public bool getCarryingGold(){
+        return carryingGold;
+    }
 }
