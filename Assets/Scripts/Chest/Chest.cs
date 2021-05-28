@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    public int gold;
+    int gold = 10;
 
     void depositGold(int amount){
         gold += amount;
@@ -35,5 +35,9 @@ public class Chest : MonoBehaviour
                 info.setCarryGoldTrue();
             info.goldCarry += amount;
         }
+    }
+
+    public int getGold(){
+        return gold;
     }
 }
