@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Chest : MonoBehaviour
 {
+<<<<<<< HEAD
+    public int gold = 10;
+    public Text goldCount;
+=======
     public GameObject GameOverPanel;
     [SerializeField] int gold = 10;
+>>>>>>> 5948e25097b82f836749fec409aa0463e371ed40
 
     void depositGold(int amount){
         gold += amount;
@@ -47,5 +53,14 @@ public class Chest : MonoBehaviour
 
     public int getGold(){
         return gold;
+    }
+
+    void Update()
+    {
+        goldUpdate();
+    }
+    
+    void goldUpdate(){
+        goldCount.text = "" + gold;
     }
 }
