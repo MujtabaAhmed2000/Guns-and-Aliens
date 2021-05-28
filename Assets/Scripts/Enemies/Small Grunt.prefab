@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 977584659795765521}
   - component: {fileID: 8943183487723890565}
   - component: {fileID: 2443233722605020998}
+  - component: {fileID: 639504786813336320}
   m_Layer: 6
   m_Name: Small Grunt
   m_TagString: Enemy
@@ -184,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.08
-  facingRight: 0
+  animator: {fileID: 639504786813336320}
 --- !u!114 &977584659795765521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,8 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c196e299899aa034db25dd5e8dd4ba37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topLeftSpawner: {fileID: 0}
-  topRightTransform: {fileID: 0}
 --- !u!114 &2443233722605020998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +228,25 @@ MonoBehaviour:
   goldCarryLimit: 10
   carryingGold: 0
   spriteRenderer: {fileID: 8431684397327885764}
+--- !u!95 &639504786813336320
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977584659795765529}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68f45ee0f51e9b44fa9c5f96a4c09274, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3768861669152498933
 GameObject:
   m_ObjectHideFlags: 0
