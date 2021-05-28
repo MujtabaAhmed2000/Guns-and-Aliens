@@ -1135,11 +1135,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897916497}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -529.95, y: 336}
+  m_AnchoredPosition: {x: -548, y: 332}
   m_SizeDelta: {x: 173.65, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &302672226
@@ -1207,8 +1207,6 @@ MonoBehaviour:
   largeGruntPrefab: {fileID: 8275451441743715335, guid: 3b20624ef5e85fc40a4d42038a6044e8,
     type: 3}
   ghostPrefab: {fileID: 2975649753283886657, guid: 4399a551d6019ca4294fd0c2d87ce650,
-    type: 3}
-  chaserPrefab: {fileID: 2329216245177047881, guid: 1d6d095f33aaf584ab2f57099b307cb1,
     type: 3}
   topLeftSpawner: {fileID: 74359898}
   topRightSpawner: {fileID: 210429692}
@@ -1742,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7657f321ccd0f084a8257f64a25fab52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 10
+  gold: 0
   goldCount: {fileID: 0}
 --- !u!1 &483419541
 GameObject:
@@ -5847,7 +5845,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897916497}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
