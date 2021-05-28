@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Chest : MonoBehaviour
 {
-    int gold = 10;
+    public int gold = 10;
+    public Text goldCount;
 
     void depositGold(int amount){
         gold += amount;
@@ -39,5 +41,14 @@ public class Chest : MonoBehaviour
 
     public int getGold(){
         return gold;
+    }
+
+    void Update()
+    {
+        goldUpdate();
+    }
+    
+    void goldUpdate(){
+        goldCount.text = "" + gold;
     }
 }
