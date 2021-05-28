@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    int gold = 10;
+    public GameObject GameOverPanel;
+    [SerializeField] int gold = 10;
 
     void depositGold(int amount){
         gold += amount;
@@ -16,9 +17,16 @@ public class Chest : MonoBehaviour
             return 10;
         }
         else{
+            GameOver();
             return 0;
         }
+    }
 
+    void GameOver()
+    {
+        Debug.Log("GAME OVER");
+        GameOverPanel.SetActive(true);
+        Time.timeScale = 0.5f;
     }
 
     void OnCollisionEnter2D(Collision2D collision){
