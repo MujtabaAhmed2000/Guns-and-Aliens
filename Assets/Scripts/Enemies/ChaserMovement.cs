@@ -6,6 +6,7 @@ public class ChaserMovement : MonoBehaviour
 {
     public float speed = 0.08f;
     float jumpForce = 6f;
+    public Animator animator;
 
     bool facingRight;
     Rigidbody2D rbody;
@@ -24,6 +25,7 @@ public class ChaserMovement : MonoBehaviour
     }
 
     public void move(){
+        animator.SetFloat("Speed", speed);
         if(facingRight)
             moveRight();
         else
