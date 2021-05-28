@@ -4214,12 +4214,12 @@ PrefabInstance:
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 940
+      value: 1535
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 133
+      value: 177
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -4536,6 +4536,7 @@ MonoBehaviour:
   isInAir: 0
   facingRight: 1
   joystick: {fileID: 2049696669}
+  animator: {fileID: 0}
 --- !u!58 &1627426950
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4580,6 +4581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba5c70fdd5c72749ba58f328c679975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverPanel: {fileID: 0}
 --- !u!114 &1627426953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4592,6 +4594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdfcb51eb552e434baa842cda066f9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.2
   firePoint: {fileID: 1280007530}
   bulletPrefab: {fileID: 7254906080960904926, guid: 554e44573e559f2438302bc82cdf9dd2,
     type: 3}
