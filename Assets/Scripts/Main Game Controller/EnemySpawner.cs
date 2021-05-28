@@ -7,12 +7,13 @@ public class EnemySpawner : MonoBehaviour
     public GameObject smallGruntPrefab;
     public GameObject largeGruntPrefab;
     public GameObject ghostPrefab;
+    public GameObject chaserPrefab;
     public Transform topLeftSpawner;
     public Transform topRightSpawner;
     public Transform midLeftSpawner;
     public Transform midRightSpawner;
-    public float spawnTimer = 2f;
-    public float spawnTimer2 = 5f;
+    public float spawnTimer = 5f;
+    public float spawnTimer2 = 10f;
 
     void FixedUpdate() 
     {
@@ -71,18 +72,39 @@ public class EnemySpawner : MonoBehaviour
 
     void spawnEnemy2(){
         float rand = Random.Range(0f, 4f);
+        float rand2 = Random.Range(0f, 1f);
 
         if(rand <= 1){
-            spawnLargeGrunt(topLeftSpawner);
+            if(rand2 <= 0.5){
+                spawnLargeGrunt(topLeftSpawner);
+            }
+            else{
+                spawnChaser(topLeftSpawner);
+            }
         }
         else if(rand <= 2){
-            spawnLargeGrunt(topRightSpawner);
+            if(rand2 <= 0.5){
+                spawnLargeGrunt(topRightSpawner);
+            }
+            else{
+                spawnChaser(topRightSpawner);
+            }
         }
         else if(rand <= 3){
-            spawnLargeGrunt(midLeftSpawner);
+            if(rand2 <= 0.5){
+                spawnLargeGrunt(midLeftSpawner);
+            }
+            else{
+                spawnChaser(midRightSpawner);
+            }
         }
         else{
-            spawnLargeGrunt(midRightSpawner);
+            if(rand2 <= 0.5){
+                spawnLargeGrunt(midRightSpawner);
+            }
+            else{
+                spawnChaser(midRightSpawner);
+            }
         }
     }
 
@@ -98,11 +120,15 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(ghostPrefab, spawner.position, spawner.rotation);
     }
 
+    void spawnChaser(Transform spawner){
+        Instantiate(chaserPrefab, spawner.position, spawner.rotation);
+    }
+
     void resetSpawnTimer(){
-        spawnTimer = 2f;
+        spawnTimer = 5f;
     }
 
     void resetSpawnTimer2(){
-        spawnTimer2 = 5f;
+        spawnTimer2 = 10f;
     }
 }

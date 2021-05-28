@@ -6,6 +6,8 @@ public class EnemyMovement : MonoBehaviour
 {
     public float speed = 0.08f;
     bool facingRight;
+    public Animator animator;
+    
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate(){
         move();
+        animator.SetFloat("Speed", speed);
     }
 
     void move(){
