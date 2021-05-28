@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Chest : MonoBehaviour
 {
-    public int gold = 10;
+    [SerializeField] int gold = 10;
+    public GameObject GameOverPanel;
     public Text goldCount;
 
     void depositGold(int amount){
@@ -25,7 +26,6 @@ public class Chest : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("GAME OVER");
         GameOverPanel.SetActive(true);
         Time.timeScale = 0.5f;
     }

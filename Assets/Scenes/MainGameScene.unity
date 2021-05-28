@@ -1135,7 +1135,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897916497}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1208,12 +1208,13 @@ MonoBehaviour:
     type: 3}
   ghostPrefab: {fileID: 2975649753283886657, guid: 4399a551d6019ca4294fd0c2d87ce650,
     type: 3}
+  chaserPrefab: {fileID: 0}
   topLeftSpawner: {fileID: 74359898}
   topRightSpawner: {fileID: 210429692}
   midLeftSpawner: {fileID: 1924512378}
   midRightSpawner: {fileID: 1156650030}
-  spawnTimer: 2
-  spawnTimer2: 5
+  spawnTimer: 5
+  spawnTimer2: 10
 --- !u!4 &342468278
 Transform:
   m_ObjectHideFlags: 0
@@ -1741,7 +1742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 0
-  goldCount: {fileID: 0}
+  GameOverPanel: {fileID: 1259762171}
+  goldCount: {fileID: 1427096571}
 --- !u!1 &483419541
 GameObject:
   m_ObjectHideFlags: 0
@@ -5845,7 +5847,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897916497}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8365,7 +8367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 10
-  goldCount: {fileID: 1427096571}
+  GameOverPanel: {fileID: 0}
+  goldCount: {fileID: 0}
 --- !u!114 &1427096571
 MonoBehaviour:
   m_ObjectHideFlags: 0
