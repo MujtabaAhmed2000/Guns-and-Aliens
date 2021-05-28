@@ -1741,7 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7657f321ccd0f084a8257f64a25fab52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 0
+  gold: 10
   GameOverPanel: {fileID: 1259762171}
   goldCount: {fileID: 1427096571}
 --- !u!1 &483419541
