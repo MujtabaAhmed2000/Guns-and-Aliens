@@ -75,7 +75,6 @@ public class ChaserScript : MonoBehaviour
         }
         else{
             movement.move();
-            Debug.Log("CALLED");
         }
     }
 
