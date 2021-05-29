@@ -56,6 +56,6 @@ public class Chest : MonoBehaviour
     }
     
     void goldUpdate(){
-        goldCount.text = "" + gold;
+        // goldCount.text = "" + gold;
     }
 }

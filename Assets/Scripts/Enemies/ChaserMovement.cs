@@ -34,9 +34,13 @@ public class ChaserMovement : MonoBehaviour
 
     public void moveLeft(){
         transform.position += new Vector3(-speed, 0, 0);
+        facingRight = false;
+        transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
     }
     public void moveRight(){
         transform.position += new Vector3(speed, 0, 0);
+        facingRight = true;
+        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
     public void jump(){
