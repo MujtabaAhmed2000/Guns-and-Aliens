@@ -19,7 +19,6 @@ public class ChaserScript : MonoBehaviour
     float nextWaypointDist = 0.1f;
     Path path;
     int currentWaypoint = 0;
-    bool readhedEndOfPath = false;
     Seeker seeker;
     Rigidbody2D rb;
 
