@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int hp = 2;
-    public GameObject player;
-    //public Text scoreUI;
+    [SerializeField] int hp = 2;
+    [SerializeField] GameObject player;
 
     void Start(){
         player = GameObject.Find("Main Player");
@@ -20,11 +19,9 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void die(){
+    public void die(){
         Destroy(gameObject);
         PlayerInfo info = player.GetComponent<PlayerInfo>();
         info.score += 1;
     }
-
-    
 }

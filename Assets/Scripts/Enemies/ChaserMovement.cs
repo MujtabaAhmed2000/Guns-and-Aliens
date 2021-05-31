@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ChaserMovement : MonoBehaviour
 {
-    public float speed = 0.08f;
-    float jumpForce = 6f;
-    public Animator animator;
+    [SerializeField] float speed = 0.08f;
+    [SerializeField] float jumpForce = 6f;
+    [SerializeField] Animator animator;
 
     bool facingRight;
     Rigidbody2D rbody;

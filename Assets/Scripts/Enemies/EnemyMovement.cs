@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float speed = 0.08f;
+    [SerializeField] float speed = 0.08f;
     bool facingRight;
-    public Animator animator;
+    [SerializeField] Animator animator;
     
 
     void Start()

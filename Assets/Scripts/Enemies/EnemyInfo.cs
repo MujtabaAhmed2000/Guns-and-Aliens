@@ -7,7 +7,7 @@ public class EnemyInfo : MonoBehaviour
     public int goldCarry;
     public int goldCarryLimit = 10;
     public bool carryingGold = false;
-    public SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
