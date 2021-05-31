@@ -22,6 +22,6 @@ public class EnemyHealth : MonoBehaviour
     public void die(){
         Destroy(gameObject);
         PlayerInfo info = player.GetComponent<PlayerInfo>();
-        info.score += 1;
+        info.addScore(1);
     }
 }

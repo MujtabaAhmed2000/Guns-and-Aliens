@@ -15,7 +15,6 @@ public class PlayerInfo : MonoBehaviour
     public Text lastScore;
     public Text currentScore;
 
-    // Start is called before the first frame update
     void Start()
     {
         score = 0;
@@ -39,6 +38,22 @@ public class PlayerInfo : MonoBehaviour
     public void setCarryGoldFalse(){
         carryingGold = false;
         spriteRenderer.enabled = false;
+    }
+
+    public void addScore(int amount){
+        score += amount;
+    }
+
+    public void addGoldCarry(int amount){
+        goldCarry += amount;
+    }
+
+    public void setGoldCarry(int amount){
+        goldCarry = amount;
+    }
+
+    public int getGoldCarry(){
+        return goldCarry;
     }
 
     void Update()
