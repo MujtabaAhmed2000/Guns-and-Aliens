@@ -58,9 +58,9 @@ public class PlayerInfo : MonoBehaviour
 
     void scoreUpdate()
     {
-        string getText = scoreText.text;
-        scoreText.text = score.ToString() ;
-        currentScore.text = getText;
-        lastScore.text = getText;
+        // string getText = scoreText.text;
+        // scoreText.text = score.ToString() ;
+        // currentScore.text = getText;
+        // lastScore.text = getText;
     }
 }

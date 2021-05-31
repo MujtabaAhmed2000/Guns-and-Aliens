@@ -27,7 +27,8 @@ public class Despawner : MonoBehaviour
                 }
             }
             else{
-                Destroy(gameObject);
+                // Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

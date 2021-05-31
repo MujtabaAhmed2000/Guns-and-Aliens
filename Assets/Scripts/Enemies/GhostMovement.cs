@@ -10,7 +10,7 @@ public class GhostMovement : MonoBehaviour
     bool facingUp = true;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         // assign random x and y speed to make ghost paths randomized
         assignNewSpeed();

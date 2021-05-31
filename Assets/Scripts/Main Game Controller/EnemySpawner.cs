@@ -109,25 +109,43 @@ public class EnemySpawner : MonoBehaviour
     }
 
     void spawnSmallGrunt(Transform spawner){
-        Instantiate(smallGruntPrefab, spawner.position, spawner.rotation);
-        // GameObject smallGrunt = ObjectPooler.SharedInstance.GetPooledObject("Bullet"); 
-        // if (bullet != null) {
-        //     bullet.transform.position = firePoint.position;
-        //     bullet.transform.rotation = firePoint.rotation;
-        //     bullet.SetActive(true);
-        // }
+        // Instantiate(smallGruntPrefab, spawner.position, spawner.rotation);
+        GameObject smallGrunt = ObjectPooler.SharedInstance.GetPooledObject("Small Grunt(Clone)"); 
+        if (smallGrunt != null) {
+            smallGrunt.transform.position = spawner.position;
+            smallGrunt.transform.rotation = spawner.rotation;
+            smallGrunt.SetActive(true);
+        }
     }
 
     void spawnLargeGrunt(Transform spawner){
-        Instantiate(largeGruntPrefab, spawner.position, spawner.rotation);
+        // Instantiate(largeGruntPrefab, spawner.position, spawner.rotation);
+        GameObject largeGrunt = ObjectPooler.SharedInstance.GetPooledObject("Large Grunt(Clone)"); 
+        if (largeGrunt != null) {
+            largeGrunt.transform.position = spawner.position;
+            largeGrunt.transform.rotation = spawner.rotation;
+            largeGrunt.SetActive(true);
+        }
     }
 
     void spawnGhost(Transform spawner){
-        Instantiate(ghostPrefab, spawner.position, spawner.rotation);
+        // Instantiate(ghostPrefab, spawner.position, spawner.rotation);
+        GameObject ghost = ObjectPooler.SharedInstance.GetPooledObject("Ghost(Clone)"); 
+        if (ghost != null) {
+            ghost.transform.position = spawner.position;
+            ghost.transform.rotation = spawner.rotation;
+            ghost.SetActive(true);
+        }
     }
 
     void spawnChaser(Transform spawner){
-        Instantiate(chaserPrefab, spawner.position, spawner.rotation);
+        // Instantiate(chaserPrefab, spawner.position, spawner.rotation);
+        GameObject chaser = ObjectPooler.SharedInstance.GetPooledObject("Chaser(Clone)"); 
+        if (chaser != null) {
+            chaser.transform.position = spawner.position;
+            chaser.transform.rotation = spawner.rotation;
+            chaser.SetActive(true);
+        }
     }
 
     void resetSpawnTimer(){

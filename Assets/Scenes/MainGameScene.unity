@@ -1281,6 +1281,22 @@ MonoBehaviour:
   itemsToPool:
   - objectToPool: {fileID: 7254906080960904926, guid: 554e44573e559f2438302bc82cdf9dd2,
       type: 3}
+    amountToPool: 10
+    shouldExpand: 1
+  - objectToPool: {fileID: 977584659795765529, guid: 4b56bac2ca2a9084dbf6c43cec9425fe,
+      type: 3}
+    amountToPool: 5
+    shouldExpand: 1
+  - objectToPool: {fileID: 2975649753283886657, guid: 4399a551d6019ca4294fd0c2d87ce650,
+      type: 3}
+    amountToPool: 5
+    shouldExpand: 1
+  - objectToPool: {fileID: 8275451441743715335, guid: 3b20624ef5e85fc40a4d42038a6044e8,
+      type: 3}
+    amountToPool: 3
+    shouldExpand: 1
+  - objectToPool: {fileID: 2329216245177047881, guid: 1d6d095f33aaf584ab2f57099b307cb1,
+      type: 3}
     amountToPool: 3
     shouldExpand: 1
 --- !u!1 &342996732
