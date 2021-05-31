@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class FlipControls : MonoBehaviour
 {
-    //public Transform controlsPanel;
-    //public Transform activityPanel;
-
-    public static bool rightTrue = true;
-    public GameObject rightControls;
-    public GameObject leftControls;
+    static bool rightTrue = true;
+    [SerializeField] GameObject rightControls;
+    [SerializeField] GameObject leftControls;
     
     public void flipcontrols()
     {

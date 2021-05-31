@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoldScript : MonoBehaviour
 {
-    public int value = 10;
+    [SerializeField] int value = 10;
 
     void OnTriggerEnter2D(Collider2D collider){
         if(collider.gameObject.tag == "Player"){

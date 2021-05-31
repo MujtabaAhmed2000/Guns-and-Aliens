@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Collisions : MonoBehaviour
 {
-    public GameObject GameOverPanel;
+    [SerializeField] GameObject GameOverPanel;
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
             gameObject.SetActive(false);
-            //Destroy(gameObject);
             GameOver();
         }
     }

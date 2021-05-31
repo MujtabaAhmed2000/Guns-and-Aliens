@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject Menu;
-    public GameObject options;
+    [SerializeField] GameObject Menu;
+    [SerializeField] GameObject options;
 
     public void PlayGame()
     {
@@ -27,7 +27,6 @@ public class MainMenu : MonoBehaviour
 
     public void exit()
     {
-        Debug.Log("Exit not working");
         Application.Quit();
     }
 

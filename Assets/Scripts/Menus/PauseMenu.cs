@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GamePaused = false;
+    static bool GamePaused = false;
+    [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject pauseButtonPanel;
+    [SerializeField] GameObject optionsMenu;
+    [SerializeField] GameObject GameSound;
+    [SerializeField] GameObject MuteButton;
 
-    public GameObject pauseMenu;
-    public GameObject pauseButtonPanel;
-    public GameObject optionsMenu;
-    public GameObject GameSound;
-    public GameObject MuteButton;
-
-    // public GameObject PauseButtonPanel { get => pauseButtonPanel; set => pauseButtonPanel = value; }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-          //  Debug.Log("Pause not working");
             if (GamePaused)
                 Resume();
             else
@@ -71,7 +66,6 @@ public class PauseMenu : MonoBehaviour
 
     public void exit()
     {
-        Debug.Log("Exit not working");
         Application.Quit();
     }
    

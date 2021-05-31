@@ -33,8 +33,8 @@ public class Chest : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "Player"){
             PlayerInfo info = collision.gameObject.GetComponent<PlayerInfo>();
-            depositGold(info.goldCarry);
-            info.goldCarry = 0;
+            depositGold(info.getGoldCarry());
+            info.setGoldCarry(0);
             info.setCarryGoldFalse();
         }
         if(collision.gameObject.tag == "Enemy"){
@@ -42,7 +42,7 @@ public class Chest : MonoBehaviour
             EnemyInfo info = collision.gameObject.GetComponent<EnemyInfo>();
             if(amount != 0)
                 info.setCarryGoldTrue();
-            info.goldCarry += amount;
+            info.setGoldCarry(amount);
         }
     }
 

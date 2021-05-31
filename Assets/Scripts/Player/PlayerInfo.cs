@@ -5,17 +5,15 @@ using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
-    public int score;
-    public int goldCarry;
-    public int goldCarryLimit = 10;
-    public bool carryingGold = false;
-    public SpriteRenderer spriteRenderer;
+    [SerializeField] int score;
+    [SerializeField] int goldCarry;
+    [SerializeField] int goldCarryLimit = 10;
+    [SerializeField] bool carryingGold = false;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Text scoreText;
+    [SerializeField] Text lastScore;
+    [SerializeField] Text currentScore;
 
-    public Text scoreText;
-    public Text lastScore;
-    public Text currentScore;
-
-    // Start is called before the first frame update
     void Start()
     {
         score = 0;
@@ -39,6 +37,18 @@ public class PlayerInfo : MonoBehaviour
     public void setCarryGoldFalse(){
         carryingGold = false;
         spriteRenderer.enabled = false;
+    }
+
+    public void addScore(int amount){
+        score += amount;
+    }
+
+    public void setGoldCarry(int amount){
+        goldCarry = amount;
+    }
+
+    public int getGoldCarry(){
+        return goldCarry;
     }
 
     void Update()
