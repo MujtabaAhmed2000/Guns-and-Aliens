@@ -9193,7 +9193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.08
   jumpForce: 7
-  isInAir: 0
+  isInAir: 1
   facingRight: 1
   joystick: {fileID: 2025008289}
   animator: {fileID: 1627426956}
