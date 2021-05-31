@@ -110,6 +110,12 @@ public class EnemySpawner : MonoBehaviour
 
     void spawnSmallGrunt(Transform spawner){
         Instantiate(smallGruntPrefab, spawner.position, spawner.rotation);
+        // GameObject smallGrunt = ObjectPooler.SharedInstance.GetPooledObject("Bullet"); 
+        // if (bullet != null) {
+        //     bullet.transform.position = firePoint.position;
+        //     bullet.transform.rotation = firePoint.rotation;
+        //     bullet.SetActive(true);
+        // }
     }
 
     void spawnLargeGrunt(Transform spawner){
