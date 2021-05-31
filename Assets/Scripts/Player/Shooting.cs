@@ -31,7 +31,13 @@ public class Shooting : MonoBehaviour
     }
 
     public void shoot(){
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        // Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = ObjectPooler.SharedInstance.GetPooledObject(); 
+        if (bullet != null) {
+            bullet.transform.position = firePoint.position;
+            bullet.transform.rotation = firePoint.rotation;
+            bullet.SetActive(true);
+        }
     }
 
     void resetDelay(){

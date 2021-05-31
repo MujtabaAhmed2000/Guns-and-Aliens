@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
 {
-    [SerializeField] static ObjectPooler SharedInstance;
+    public static ObjectPooler SharedInstance;
 
     [SerializeField] List<GameObject> pooledObjects;
     [SerializeField] GameObject objectToPool;
