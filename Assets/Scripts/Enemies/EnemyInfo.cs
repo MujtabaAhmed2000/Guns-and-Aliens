@@ -9,9 +9,10 @@ public class EnemyInfo : MonoBehaviour
     public bool carryingGold = false;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    void Start()
+    void OnEnable()
     {
         goldCarry = 0;
+        carryingGold = false;
     }
 
     public bool addGold(int amount){

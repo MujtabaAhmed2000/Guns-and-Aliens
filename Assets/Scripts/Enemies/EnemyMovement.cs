@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 0.08f;
+    [SerializeField] float speed = 0.14f;
     bool facingRight;
     [SerializeField] Animator animator;
     
 
-    void Start()
+    void OnEnable()
     {
         //To make the sprite face left when spawns from tpo right corner
         if(transform.rotation.y == 0){
