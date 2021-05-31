@@ -9,19 +9,16 @@ public class ChaserScript : MonoBehaviour
     EnemyInfo info;
     [SerializeField] bool goldInSight = false;
     [SerializeField] bool carryingGold = false;
+    Vector3 chaserOffsetPosition;
+    float offset = 0.5f;
     GameObject gold;
-    public float speed = 200f;
+    Transform goldTransform;
     float jumpCooldown = 1f;
-    float jumpDelay = 0.5f;
-    int goldLocationLevel;
-
-    // public float speed = 200f;
 
     // ASTAR STUFF
-    float nextWaypointDist = 3f;
+    float nextWaypointDist = 0.1f;
     Path path;
-    int currentWaypoint = 1;
-    bool readhedEndOfPath = false;
+    int currentWaypoint = 0;
     Seeker seeker;
     Rigidbody2D rb;
 
@@ -38,7 +35,6 @@ public class ChaserScript : MonoBehaviour
 
         // Only find a new gold location when the currently pursued gold dissapears
         if(!goldInSight && !carryingGold){
-            // getGoldLocation();
             Invoke("getGoldLocation", 3f);
         }
         // if carrying gold or gold is null(gameobject destroyed)), set goldinsight to false
@@ -47,56 +43,34 @@ public class ChaserScript : MonoBehaviour
             goldInSight = false;
         }
 
-
         // if gold in sight, move towards the gold, otherwise follow normal path
         if(goldInSight){
-            // seeker.StartPath(transform.position, getGoldTransform().position, OnPathComplete);
             if(path == null){
                 return;
             }
 
-            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint + 1] - (Vector2)path.vectorPath[currentWaypoint]).normalized;
 
             if(direction.x > 0){
-                // Debug.Log("MOVE RIGHT");
                 movement.moveRight();
             }
             if(direction.x < 0){
-                // Debug.Log("MOVE LEFT");
                 movement.moveLeft();
             }
             if(direction.y > 0.5){
                 if(jumpCooldown <= 0.0f){
-                    // Task.Delay(1000).ContinueWith(t=> movement.jump());
                     Invoke("jump", 0.3f);
-                    // movement.jump();
                     resetJumpCooldown();
                 }
             }
-            
-            Vector2 force = direction * speed * Time.deltaTime;
 
-            // rb.AddForce(force);
-
-            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
+            float distance = Vector2.Distance((Vector2)getChaserOffsetPosition(), path.vectorPath[currentWaypoint]);
 
             if(distance < nextWaypointDist){
-                if(currentWaypoint + 1 == path.vectorPath.Count){
-                    currentWaypoint = currentWaypoint;
-                }
-                else{
+                if(!(currentWaypoint + 1 == path.vectorPath.Count)){
                     currentWaypoint++;
                 }
             }
-
-            // if(direction.y > 0){
-            //     movement.moveRight();
-            // }
-            // if(direction.y < 0){
-            //     movement.moveLeft();
-            // }
-
         }
         else{
             movement.move();
@@ -118,48 +92,28 @@ public class ChaserScript : MonoBehaviour
         }
         else{
             goldInSight = true;
-
-            // Transform t = getGoldTransform();
-            // Vector3 pos = t.position;
-            
-            // if(pos.y == 8){
-            //     goldLocationLevel = 5;
-            // }
-            // else if(pos.y == 6){
-            //     goldLocationLevel = 4;
-            // }
-            // else if(pos.y == 6){
-            //     goldLocationLevel = 3;
-            // }
-            // else if(pos.y == 6){
-            //     goldLocationLevel = 2;
-            // }
-            // else if(pos.y == 2){
-            //     goldLocationLevel = 1;
-            // }
-            // else if(pos.y == 0){
-            //     goldLocationLevel = 0;
-            // }
-
-            InvokeRepeating("updatePath", 0f, 1.5f);
-            // seeker.StartPath(transform.position, t.position, OnPathComplete);
+            goldTransform = gold.GetComponent<Transform>();
+            InvokeRepeating("updatePath", 0f, 2f);
         }
     }
 
     void updatePath(){
-        Transform t = getGoldTransform();
-        seeker.StartPath(transform.position, t.position, OnPathComplete);
+        if(gold != null){
+            seeker.StartPath(getChaserOffsetPosition(), goldTransform.position, OnPathComplete);
+        }
+    }
+
+    Vector3 getChaserOffsetPosition(){
+        chaserOffsetPosition = transform.position;
+        chaserOffsetPosition.y += offset;
+        return chaserOffsetPosition;
     }
 
     void OnPathComplete(Path p){
         if(!p.error){
             path = p;
-            currentWaypoint = 1; 
+            currentWaypoint = 0; 
         }
-    }
-
-    Transform getGoldTransform(){
-        return gold.GetComponent<Transform>();
     }
 
     float getGoldTransformX(){
