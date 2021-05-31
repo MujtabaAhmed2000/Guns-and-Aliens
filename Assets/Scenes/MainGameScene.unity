@@ -9157,7 +9157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4142b185a76064bbf8d193390145e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.08
+  speed: 0.14
   jumpForce: 7
   joystick: {fileID: 2025008289}
   animator: {fileID: 1627426956}

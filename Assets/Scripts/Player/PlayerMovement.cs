@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 0.08f;
+    [SerializeField] float speed = 0.14f;
     [SerializeField] float jumpForce = 7f;
     bool isInAir = false;
     float xAxisInput;
