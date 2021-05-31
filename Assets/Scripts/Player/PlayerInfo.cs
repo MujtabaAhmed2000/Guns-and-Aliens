@@ -5,15 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
-    public int score;
-    public int goldCarry;
-    public int goldCarryLimit = 10;
-    public bool carryingGold = false;
-    public SpriteRenderer spriteRenderer;
-
-    public Text scoreText;
-    public Text lastScore;
-    public Text currentScore;
+    [SerializeField] int score;
+    [SerializeField] int goldCarry;
+    [SerializeField] int goldCarryLimit = 10;
+    [SerializeField] bool carryingGold = false;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Text scoreText;
+    [SerializeField] Text lastScore;
+    [SerializeField] Text currentScore;
 
     void Start()
     {
