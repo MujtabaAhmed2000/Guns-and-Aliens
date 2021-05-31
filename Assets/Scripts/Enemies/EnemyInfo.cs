@@ -9,7 +9,6 @@ public class EnemyInfo : MonoBehaviour
     public bool carryingGold = false;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
     void Start()
     {
         goldCarry = 0;
@@ -32,6 +31,14 @@ public class EnemyInfo : MonoBehaviour
     public void setCarryGoldFalse(){
         carryingGold = false;
         spriteRenderer.enabled = false;
+    }
+
+    public void setGoldCarry(int amount){
+        goldCarry = amount;
+    }
+
+    public int getGoldCarry(){
+        return goldCarry;
     }
 
     public bool getCarryingGold(){

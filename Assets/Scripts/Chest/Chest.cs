@@ -42,7 +42,7 @@ public class Chest : MonoBehaviour
             EnemyInfo info = collision.gameObject.GetComponent<EnemyInfo>();
             if(amount != 0)
                 info.setCarryGoldTrue();
-            info.goldCarry += amount;
+            info.setGoldCarry(amount);
         }
     }
 

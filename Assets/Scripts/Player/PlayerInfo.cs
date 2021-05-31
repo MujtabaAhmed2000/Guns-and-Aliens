@@ -43,10 +43,6 @@ public class PlayerInfo : MonoBehaviour
         score += amount;
     }
 
-    public void addGoldCarry(int amount){
-        goldCarry += amount;
-    }
-
     public void setGoldCarry(int amount){
         goldCarry = amount;
     }

@@ -9159,8 +9159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.08
   jumpForce: 7
-  isInAir: 1
-  facingRight: 1
   joystick: {fileID: 2025008289}
   animator: {fileID: 1627426956}
 --- !u!58 &1627426950
@@ -9241,9 +9239,9 @@ MonoBehaviour:
   goldCarryLimit: 10
   carryingGold: 0
   spriteRenderer: {fileID: 400317056}
-  scoreText: {fileID: 0}
-  lastScore: {fileID: 0}
-  currentScore: {fileID: 0}
+  scoreText: {fileID: 286263514}
+  lastScore: {fileID: 735465918}
+  currentScore: {fileID: 1631335099}
 --- !u!82 &1627426955
 AudioSource:
   m_ObjectHideFlags: 0
