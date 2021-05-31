@@ -11,7 +11,7 @@ public class PlayerInfo : MonoBehaviour
     [SerializeField] bool carryingGold = false;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Text scoreText;
-    [SerializeField] Text lastScore;
+    //[SerializeField] Text lastScore;
     [SerializeField] Text currentScore;
 
     void Start()
@@ -51,6 +51,12 @@ public class PlayerInfo : MonoBehaviour
         return goldCarry;
     }
 
+    public int getScore()
+    {
+        return score;
+    }
+
+
     void Update()
     {
         scoreUpdate();
@@ -61,6 +67,6 @@ public class PlayerInfo : MonoBehaviour
         string getText = scoreText.text;
         scoreText.text = score.ToString() ;
         currentScore.text = getText;
-        lastScore.text = getText;
+      //  lastScore.text = getText;
     }
 }

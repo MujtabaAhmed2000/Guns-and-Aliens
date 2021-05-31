@@ -2317,7 +2317,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755554321}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Collisions, Assembly-CSharp
         m_MethodName: PlayAgain
         m_Mode: 1
@@ -5625,6 +5625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 1259762171}
+  lastScore: {fileID: 735465918}
 --- !u!1 &780204958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6376,8 +6377,7 @@ MonoBehaviour:
   carryingGold: 0
   spriteRenderer: {fileID: 0}
   scoreText: {fileID: 286263514}
-  lastScore: {fileID: 735465918}
-  currentScore: {fileID: 0}
+  currentScore: {fileID: 1631335099}
 --- !u!114 &897916494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9206,6 +9206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 1259762171}
+  lastScore: {fileID: 735465918}
 --- !u!114 &1627426953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9240,8 +9241,7 @@ MonoBehaviour:
   carryingGold: 0
   spriteRenderer: {fileID: 400317056}
   scoreText: {fileID: 286263514}
-  lastScore: {fileID: 735465918}
-  currentScore: {fileID: 1631335099}
+  currentScore: {fileID: 0}
 --- !u!82 &1627426955
 AudioSource:
   m_ObjectHideFlags: 0
