@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
-    public float xSpeed;
-    public float ySpeed;
-    public bool facingRight;
-    public bool facingUp = true;
+    [SerializeField] float xSpeed;
+    [SerializeField] float ySpeed;
+    bool facingRight;
+    bool facingUp = true;
 
     // Start is called before the first frame update
     void Start()

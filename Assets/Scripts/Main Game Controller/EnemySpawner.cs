@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject smallGruntPrefab;
-    public GameObject largeGruntPrefab;
-    public GameObject ghostPrefab;
-    public GameObject chaserPrefab;
-    public Transform topLeftSpawner;
-    public Transform topRightSpawner;
-    public Transform midLeftSpawner;
-    public Transform midRightSpawner;
-    public float spawnTimer = 5f;
-    public float spawnTimer2 = 10f;
+    [SerializeField] GameObject smallGruntPrefab;
+    [SerializeField] GameObject largeGruntPrefab;
+    [SerializeField] GameObject ghostPrefab;
+    [SerializeField] GameObject chaserPrefab;
+    [SerializeField] Transform topLeftSpawner;
+    [SerializeField] Transform topRightSpawner;
+    [SerializeField] Transform midLeftSpawner;
+    [SerializeField] Transform midRightSpawner;
+    [SerializeField] float spawnTimer = 5f;
+    [SerializeField] float spawnTimer2 = 10f;
 
     void FixedUpdate() 
     {

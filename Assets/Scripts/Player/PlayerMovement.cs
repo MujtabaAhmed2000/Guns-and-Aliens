@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 0.08f;
-    public float jumpForce = 7f;
-    public bool isInAir = false;
+    [SerializeField] float speed = 0.08f;
+    [SerializeField] float jumpForce = 7f;
+    bool isInAir = false;
     float xAxisInput;
     Rigidbody2D rbody;
     Vector3 velocityV3;
     Vector3 scale;
-    public bool facingRight = true;
-    public Joystick joystick;
-    public Animator animator;
+    bool facingRight = true;
+    [SerializeField] Joystick joystick;
+    [SerializeField] Animator animator;
 
-    // Start is called before the first frame update
     void Start()
     {
-        // transform.position += new Vector3(0, -0.8f, 0);
-        // transform.localScale.Set(2, 2, 2);
         rbody = GetComponent<Rigidbody2D>();
     }
 
