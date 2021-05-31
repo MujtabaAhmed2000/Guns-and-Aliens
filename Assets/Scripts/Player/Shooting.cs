@@ -32,7 +32,7 @@ public class Shooting : MonoBehaviour
 
     public void shoot(){
         // Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        GameObject bullet = ObjectPooler.SharedInstance.GetPooledObject(); 
+        GameObject bullet = ObjectPooler.SharedInstance.GetPooledObject("Bullet"); 
         if (bullet != null) {
             bullet.transform.position = firePoint.position;
             bullet.transform.rotation = firePoint.rotation;

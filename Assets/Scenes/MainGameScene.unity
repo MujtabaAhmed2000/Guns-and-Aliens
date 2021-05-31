@@ -1183,6 +1183,7 @@ GameObject:
   - component: {fileID: 342468278}
   - component: {fileID: 342468277}
   - component: {fileID: 342468279}
+  - component: {fileID: 342468280}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1264,6 +1265,24 @@ MonoBehaviour:
   - {fileID: 302672227}
   - {fileID: 1102072559}
   spawntimer: 4
+--- !u!114 &342468280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342468276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2759e5d12ce158d4ab7d538a5adbabc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  itemsToPool:
+  - objectToPool: {fileID: 7254906080960904926, guid: 554e44573e559f2438302bc82cdf9dd2,
+      type: 3}
+    amountToPool: 3
+    shouldExpand: 1
 --- !u!1 &342996732
 GameObject:
   m_ObjectHideFlags: 0
