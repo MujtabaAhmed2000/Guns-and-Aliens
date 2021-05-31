@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GoldSpawner : MonoBehaviour
 {
-    public GameObject goldPrefab;
+    [SerializeField] GameObject goldPrefab;
     
-    public Transform[] GoldSpawnerPos;
+    [SerializeField] Transform[] GoldSpawnerPos;
 
-    public float spawntimer = 4f;
+    [SerializeField] float spawntimer = 4f;
 
     void FixedUpdate()
     {
