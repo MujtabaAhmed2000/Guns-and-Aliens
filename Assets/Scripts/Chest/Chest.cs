@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Chest : MonoBehaviour
 {
     [SerializeField] int gold = 10;
-    public GameObject GameOverPanel;
-    public Text goldCount;
+    [SerializeField] GameObject GameOverPanel;
+    [SerializeField] Text goldCount;
 
     void depositGold(int amount){
         gold += amount;
