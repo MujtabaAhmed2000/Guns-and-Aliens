@@ -13,6 +13,7 @@ public class PlayerInfo : MonoBehaviour
 
     public Text scoreText;
     public Text lastScore;
+    public Text currentScore;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +48,9 @@ public class PlayerInfo : MonoBehaviour
 
     void scoreUpdate()
     {
-        scoreText.text = score.ToString();
-        lastScore = scoreText;
+        string getText = scoreText.text;
+        scoreText.text = score.ToString() ;
+        currentScore.text = getText;
+        lastScore.text = getText;
     }
 }
